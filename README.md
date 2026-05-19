@@ -71,7 +71,7 @@ The oxide circuit is the most stable and predictable of the three. All three mod
 
 ### Mixed Ore Circuit
 
-![Kansanshi Mixed](ml-screenshots/kansanshi_mixed_chart.png)
+![Kansanshi Mixed](Model%20results%20screenshots/kansanshi_mixed_chart.png)
 
 The mixed ore type is the most interesting ore type in the entire project. It drives the largest spread between scenarios. it goes from 41,652 tonnes pessimistic to 184,275 tonnes optimistic which is a 142,000 tonne range from a single ore type. Ridge achieves a cross-validated R² of 0.8890 on mixed ore, the strongest performance of any model on any ore type in this project. The RF ceiling effect is clearly visible on the RF panel. The Optimistic and Best Case predictions are identical at 79,409 tonnes. Ridge and GPR both extrapolate beyond the training range, though more cautiously than the Excel formula. This is an ore type worth searching and investing in.
 
@@ -103,12 +103,14 @@ The final comparison shows Excel, Ridge, and GPR side by side for both mines. Fo
 
 ![Scenario Forecast Lines](Model%20results%20screenshots/scenario_forecast_lines.png)
 
-Three line charts show the full 2024 to 2031 trajectory for each scenario. The Pessimistic chart shows all lines declining from the 2024 baseline. The Best Case chart shows the corrected smooth Excel trajectory with Ridge and GPR tracking closely. The Optimistic chart is where the story is clearest the Excel line climbs steeply to 624,315 tonnes while RF flatlines and Ridge and GPR rise gradually. The gap between Excel and the ML models on Optimistic means that the mines need to operate in an ideal way which is rare in the real world.
+Three line charts show the full 2024 to 2031 trajectory for each scenario. The Pessimistic chart shows all lines declining from the 2024 baseline. The Best Case chart shows the error in the  Excel trajectory. The Optimistic chart is where the story is clearest. The Excel line climbs in a very steep way up to 624,315 tonnes while RF goes flat and Ridge and GPR rise steadily. The gap between Excel and the ML models on Optimistic means that the mines need to operate in an ideal way which is rare in the real world.
 
 ---
 
 ## Conclusion
 
+---
 
-Can Zambia reach 3m tonnes by 2031? Yes and no.
+Can Zambia reach 3m tonnes by 2031? Yes and no. FQM contributes roughly 45 % of Zambias total copper output then the 55 is split by the other big mines which are Barrick lumwana, KCM and Mopani as well as small scale mines. For the share of 45% FQM would need to provide historical numbers of output approximately 1.3 million tonnes, by expanding into more areas with mixed ore for kansanshi and increasing the throughput and overall operations at sentinel to never before seen excellent levels. Then the rest must be compensated for by other big mines or other newer mines being set up. In this case it is possible. If however things remain as they are then the target may come too soon. 
+
 ---
