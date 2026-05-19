@@ -5,7 +5,7 @@
 
 ## Dashboard.
 
-![Dashboard](Tableau Screenshots/Copper_Production_Scenario_Dashboard_Screenshot.png)
+![Dashboard](Tableau%20Screenshots/Copper_Production_Scenario_Dashboard_Screenshot.png)
 
 The dashboard shows the FQM copper prodution predictions starting from the actual at 2024 all the way to 2031. The bar chart shows the three 2031 scenario totals for both mines combined. There is the Best Case at 485,416 tonnes, Optimistic at 624,315 tonnes, and Pessimistic at 350,347 tonnes. The pie chart on the right shows how Kansanshi's Optimistic 2031 output is divided based on the type of ore of which mixed ore contributes more at 184,275 tonnes. The line chart at the bottom shows how each scenario trends from the  2024 actual value of 401,721 tonnes all the way up to 2031. The dip on the Best Case line at 2028 is a data entry error in the original excel file which was corrected using three dfferent machine learning algorithms for validation purposes.
 
