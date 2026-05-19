@@ -95,7 +95,7 @@ The slope analysis shows the rate of production change in tonnes per year betwee
 
 ![Predictions Comparison](Model%20results%20screenshots/predictions_comparison.png)
 
-The final comparison shows Excel, Ridge, and GPR side by side for both mines. For Sentinel, Ridge and GPR closely bracket the Excel forecast on Pessimistic and Best Case within 5%. For Kansanshi the models are more cautious on the Optimistic scenario. The overall picture shows that the scenarios, predicted by the models, that are more in agrrement with the  Excel predictions are for Pessimistic and Best Case. The Optimistic scenario should be treated as something that needs a lot of things to go right before it occurs which in an ideal world it does not.
+The final comparison shows Excel, Ridge, and GPR side by side for both mines. For Sentinel, Ridge and GPR closely bracket the Excel forecast on Pessimistic and Best Case within 5%. For Kansanshi the models are more cautious on the Optimistic scenario. The overall picture shows that the scenarios, predicted by the models, that are more in agreement with the  Excel predictions are Pessimistic and Best Case. The Optimistic scenario should be treated as something that needs a lot of things to go right before it occurs which in the real world it does not.
 
 ---
 
