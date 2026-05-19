@@ -15,21 +15,21 @@ The dashboard shows the FQM copper prodution predictions starting from the actua
 
 ![Scenario Comparison](Tableau%20Screenshots/Copper%20production%20by%20scenario%20Screenshot.png)
 
-Three scenarios were modelled for the combined FQM Zambia operations across Sentinel and Kansanshi. The  difference between optimistic and pessimistic scenario is 274,000 tonnes. The reason for this is because of the mixed ore at Kansanshi. Under the pessimistic case, mixed ore contributes 41,652 tonnes. Under the optimistic case it contributes 184,275 tonnes. That is a difference of 142,000 tonnes. Therefore mixed ore is the most important contributing factor in this prediction.
+Three scenarios were modelled for the combined FQM Zambia operations across Sentinel and Kansanshi. The  difference between optimistic and pessimistic scenario is 274,000 tonnes. The reason for this is because of the mixed ore at Kansanshi. Under the pessimistic case, mixed ore contributes 41,652 tonnes. Under the optimistic case it contributes 184,275 tonnes. That is a difference of 142,623 tonnes. Therefore mixed ore is the most important contributing factor in this prediction thus making it a key performance indicator.
 
 ---
 
 ## Production Trajectory 2024–2031
 
-![Production Trajectory](screenshots/Production_trajectory_Screenshot.png)
+![Production Trajectory](Tableau%20Screenshots/Production%20trajectory%20Screenshot.png)
 
-All three scenarios start from the same 2024 actual baseline of 401,721 tonnes and diverge over seven years. The Optimistic trajectory assumes the mine achieves recovery rates, ore grades, and throughput volumes it has never historically reached — which is why the machine learning models later predict more conservatively on this scenario than the formula-based Excel forecast does. The Best Case line dips sharply at 2028 — this is the data anomaly identified during analysis where a missing zero in the Kansanshi mixed ore summary table recorded 10,620 tonnes instead of 106,260 tonnes. The corrected figure is used in all ML predictions.
+All three scenarios start from the same 2024 actual value of 401,721 tonnes and trend over seven years. The Optimistic case assumes the mine achieves recovery rates, ore grades, and throughput volumes that are very ideal which is why the machine learning models later predict more cautiously on this scenario than the formula-based Excel forecast does because in the real word things are far from ideal. The Best Case line dips sharply at 2028 this is the data error where a missing zero in the Kansanshi mixed ore summary table recorded 10,620 tonnes instead of 106,260 tonnes. The corrected figure is used in all ML predictions.
 
 ---
 
 ## Kansanshi Ore Circuit Breakdown — Optimistic 2031
 
-![Kansanshi Ore Circuits](screenshots/Kansanshi_Mixed_ore_Screenshot.png)
+![Kansanshi Ore Circuits](Tableau%20Screenshots/Kansanshi%20Mixed%20ore%20Screenshot.png)
 
 Kansanshi operates three ore circuits simultaneously — oxide, mixed, and sulphide — each with completely different grade, recovery, and throughput characteristics. Under the optimistic 2031 scenario, mixed ore accounts for 184,275 tonnes (52% of total Kansanshi output), sulphide for 119,784 tonnes (34%), and oxide for 50,503 tonnes (14%). This breakdown is the reason Kansanshi was modelled circuit by circuit in the machine learning section rather than as a single entity. Each circuit required its own model.
 
