@@ -13,9 +13,9 @@ The dashboard shows the FQM copper prodution predictions starting from the actua
 
 ## 2031 Scenario Comparison
 
-![Scenario Comparison](screenshots/Copper_production_by_scenario_Screenshot.png)
+![Scenario Comparison](Tableau%20Screenshots/Copper%20production%20by%20scenario%20Screenshot.png)
 
-Three scenarios were modelled for the combined FQM Zambia operations across Sentinel and Kansanshi. The 274,000 tonne spread between Pessimistic and Optimistic is not random — it is almost entirely driven by a single variable at Kansanshi: the mixed ore circuit. Under the pessimistic case, mixed ore contributes 41,652 tonnes. Under the optimistic case it contributes 184,275 tonnes. That 142,000 tonne swing from one circuit explains why mixed ore is the single most important operational lever in this entire forecast.
+Three scenarios were modelled for the combined FQM Zambia operations across Sentinel and Kansanshi. The  difference between optimistic and pessimistic scenario is 274,000 tonnes. The reason for this is because of the mixed ore at Kansanshi. Under the pessimistic case, mixed ore contributes 41,652 tonnes. Under the optimistic case it contributes 184,275 tonnes. That is a difference of 142,000 tonnes. Therefore mixed ore is the most important contributing factor in this prediction.
 
 ---
 
