@@ -7,7 +7,7 @@
 
 ![Dashboard](Tableau%20Screenshots/Copper%20Production%20Scenario%20Dashboard%20Screenshot.png)
 
-The dashboard shows the FQM copper prodution predictions starting from the actual at 2024 all the way to 2031. The bar chart shows the three 2031 scenario totals for both mines combined. There is the Best Case at 485,416 tonnes, Optimistic at 624,315 tonnes, and Pessimistic at 350,347 tonnes. The pie chart on the right shows how Kansanshi's Optimistic 2031 output is divided based on the type of ore of which mixed ore contributes more at 184,275 tonnes. The line chart at the bottom shows how each scenario trends from the  2024 actual value of 401,721 tonnes all the way up to 2031. The dip on the Best Case line at 2028 is a data entry error in the original excel file which was corrected using three dfferent machine learning algorithms for validation purposes.
+The dashboard shows the FQM copper prodution predictions starting from the actual at 401 721 in 2024 all the way to 2031. The bar chart shows the three 2031 scenario totals for both mines combined. There is the Best Case at 485,416 tonnes, Optimistic at 624,315 tonnes, and Pessimistic at 350,347 tonnes. The pie chart on the right shows how Kansanshi's Optimistic 2031 output is divided based on the type of ore of which mixed ore contributes more at 184,275 tonnes. The line chart at the bottom shows how each scenario trends from the  2024 actual value of 401,721 tonnes all the way up to 2031. The dip on the Best Case line at 2028 is a data entry error in the original excel file which was corrected using three dfferent machine learning algorithms for validation purposes.
 
 ---
 
@@ -27,23 +27,23 @@ All three scenarios start from the same 2024 actual value of 401,721 tonnes and 
 
 ---
 
-## Kansanshi Ore Circuit Breakdown — Optimistic 2031
+## Kansanshi Ore Type Breakdown — Optimistic 2031
 
 ![Kansanshi Ore](Tableau%20Screenshots/Kansanshi%20Mixed%20ore%20Screenshot.png)
 
-Kansanshi mines three types of ore. These are oxide, mixed, and sulphide. Each of these has completely different grade, recovery, and throughput characteristics. Under the optimistic 2031 scenario, mixed ore accounts for 184,275 tonnes (52% of total Kansanshi output), sulphide for 119,784 tonnes (34%), and oxide for 50,503 tonnes (14%). In the dashboard the optimistic scenario was chosen because we are trying to investigate what factors contribute to copper production as well as try to predict whether the 3 million tonnes is a viable target. So the optimistic scenario is our best chance of getting a value that high. In this case it turns out that in this particular scenario if we wanted to get a value that high then more of the mixed ore would have to be mined seeing it produces the most to kansanshi which will in turn increase the overall production of FQM. 
+Kansanshi mines three types of ore. These are oxide, mixed, and sulphide. Each of these has completely different grade, recovery, and throughput characteristics. Under the optimistic 2031 scenario, mixed ore accounts for 184,275 tonnes (52% of total Kansanshi output), sulphide for 119,784 tonnes (34%), and oxide for 50,503 tonnes (14%). In the dashboard the optimistic scenario was chosen because we are trying to investigate what factors contribute to copper production as well as try to predict whether the 3 million tonnes is a viable target. So the optimistic scenario is our best chance of getting a value that high. In this case it turns out that in this particular scenario if we wanted to get a value that high then more of the mixed ore would have to be mined seeing it produces the most to kansanshi which will in turn increase the overall production of FQM which if other small scale mines and the other large mines in the country follow, then the chances of reaching 3 million tonnes is high.
 
 ---
 
 ## Machine Learning — Sentinel FQM
 
-Three models were applied to Sentinel's historical production data (2015–2024): Random Forest, Ridge Regression, and Gaussian Process Regression. Sentinel was chosen first because it is a single ore open pit.
+Three models were applied to FQM's historical production data (2015–2024): Random Forest, Ridge Regression, and Gaussian Process Regression. Sentinel was chosen first because it is a single ore open pit.
 
 ### Random Forest
 
 ![Sentinel RF](Model%20results%20screenshots/sentinel_rf_chart.png)
 
-Random Forest works by building 200 decision trees independently and then average their predictions. The feature importance panel reveals that throughput drives 43.8% of Sentinel's production, recovery rate 33.4%, and ore grade 22.8%. So this means that under these parameters the mine can focus on having their equipment always available such as crushers and mills and also working on making surre their blasting is high quality so that more rock may enter the mills.. The 2031 prediction panel shows that the Best Case and Optimistic predictions are identical at 239,450 tonnes, meaning the model has hit a ceiling. It cannot predict values outside the range it was trained on. This is addressed by Ridge Regression and GPR below.
+Random Forest works by building 200 decision trees independently and then average their predictions. The feature importance panel reveals that throughput drives 43.8% of Sentinel's production, recovery rate 33.4%, and ore grade 22.8%. So this means that under these parameters the mine can focus on having their equipment always available such as crushers and mills and also working on making surre their blasting is high quality so that more rock may enter the mills. The 2031 prediction panel shows that the Best Case and Optimistic predictions are identical at 239,450 tonnes, meaning the model has hit a ceiling. It cannot predict values outside the range it was trained on. This is addressed by Ridge Regression and GPR below.
 
 ### Ridge Regression
 
@@ -63,23 +63,23 @@ Gaussian Process Regression is specifically designed for small datasets and prov
 
 Kansanshi was modelled by ore type. Three separate models were trained for each type: oxide, mixed, and sulphide using the same three algorithms. The ore type predictions were then summed to produce the total Kansanshi forecast.
 
-### Oxide Ore
+### Oxide Ore type
 
 ![Kansanshi Oxide](Model%20results%20screenshots/kansanshi_oxide_chart.png)
 
 The oxide circuit is the most stable and predictable of the three. All three models produce tight predictions close to the Excel forecast across all scenarios — GPR's confidence intervals are the narrowest in the entire project (±2,331 pessimistic, ±1,593 best case, ±3,665 optimistic). Ridge achieves the only positive cross-validated R² at 0.1323. The oxide ore is in long-term decline.
 
-### Mixed Ore Circuit
+### Mixed Ore type
 
 ![Kansanshi Mixed](Model%20results%20screenshots/kansanshi_mixed_chart.png)
 
 The mixed ore type is the most interesting ore type in the entire project. It drives the largest spread between scenarios. it goes from 41,652 tonnes pessimistic to 184,275 tonnes optimistic which is a 142,000 tonne range from a single ore type. Ridge achieves a cross-validated R² of 0.8890 on mixed ore, the strongest performance of any model on any ore type in this project. The RF ceiling effect is clearly visible on the RF panel. The Optimistic and Best Case predictions are identical at 79,409 tonnes. Ridge and GPR both extrapolate beyond the training range, though more cautiously than the Excel formula. This is an ore type worth searching and investing in.
 
-### Sulphide Circuit
+### Sulphide ore type
 
 ![Kansanshi Sulphide](Model%20results%20screenshots/kansanshi_sulphide_chart.png)
 
-Sulphide ore grade has declined from 0.88% in 2021 to 0.60% in 2024 . The RF feature importance panel tells us that: throughput drives 55.9% of sulphide production  and grade drives 37.0%. The dominance of throughput over grade reveals that the mine has been compensating for falling grade by pushing more ore through the mill. This strategy has though successful at times has its limits and can lead to the over using of mining machinery.
+Sulphide ore grade has declined from 0.88% in 2021 to 0.60% in 2024 . The RF feature importance panel tells us that: throughput drives 55.9% of sulphide production  and grade drives 37.0%. The dominance of throughput over grade reveals that the mine has been compensating for falling grade by pushing more ore through the mill. This strategy though successful at times has its limits and can lead to the over using of mining machinery.
 
 ---
 
@@ -111,6 +111,6 @@ Three line charts show the full 2024 to 2031 trajectory for each scenario. The P
 
 ---
 
-Can Zambia reach 3m tonnes by 2031? Yes and no. FQM contributes roughly 45 % of Zambias total copper output then the 55 is split by the other big mines which are Barrick lumwana, KCM and Mopani as well as small scale mines. For the share of 45% FQM would need to provide historical numbers of output approximately 1.3 million tonnes, by expanding into more areas with mixed ore for kansanshi and increasing the throughput and overall operations at sentinel to never before seen excellent levels. Then the rest must be compensated for by other big mines or other newer mines being set up. In this case it is possible. If however things remain as they are then the target may come too soon. 
+Can Zambia reach 3m tonnes by 2031? Yes and no. FQM contributes roughly 45% of Zambias total copper output then the 55% is split by the other big mines which are Barrick lumwana, KCM and Mopani as well as small scale mines. For the share of 45% FQM would need to provide historical numbers of output approximately 1.3 million tonnes, by expanding into more areas with mixed ore for kansanshi and increasing the throughput and overall operations at sentinel to never before seen excellent levels. Then the rest must be compensated for by other big mines or other newer mines being set up. In this case it is possible. If however things remain as they are then the target may come too soon. 
 
 ---
